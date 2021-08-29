@@ -1,0 +1,33 @@
+//https://atcoder.jp/contests/abc216/tasks/abc216_c
+
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+int main()
+{
+    optimize();
+    long long n,x;
+    string s;
+    cin>>n;
+    x=n;
+    while(x>0)
+    {
+        if(x%2==0)
+        {
+            s+='B';
+            x -= x/2;
+        }
+        else
+        {
+            s+= 'A';
+            x -= 1;
+        }
+
+    }
+
+    reverse(s.begin(),s.end());
+    cout<<s<<endl;
+
+    return 0;
+}
